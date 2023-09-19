@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample HTML</title>
+  </head>
+  <body>
+    <img src="https://picsum.photos/id/16/400/600" alt="Image to animate" />
+    <style>
+      img {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        animation: slide 5s linear infinite;
+      }
+      @keyframes slide {
+        0% {
+          left: 50px;
+        }
+        50% {
+          left: 900px;
+          border: solid red 5px;
+        }
+        100% {
+          left: 50px;
+          border: solid green 10px;
+        }
+      }
+      img:hover {
+        transform: scale(1.5);
+        transition: 1s;
+        animation-play-state: paused;
+      }
+    </style>
+  </body>
+</html>
